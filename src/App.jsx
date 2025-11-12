@@ -9,6 +9,7 @@ function App() {
   const [numberAllowed, setNumberAllowed] = useState(false)
   const [charAllowed, setCharAllowed] = useState(false)
   const [password, setPassword] = useState('')
+  const [color, setColor] = useState('pink')
 
   const passwordRef = useRef()
 
@@ -38,8 +39,8 @@ function App() {
   }, [length, numberAllowed, charAllowed])
 
   return (
-    <div className='w-full h-screen flex justify-center items-center'>
-      <div className='grid gap-7 max-w-md mx-auto shadow-md rounded-lg px-8 py-10 bg-gray-800 text-orange-500'>
+    <div className='w-full h-screen flex justify-center items-center' style={{backgroundColor: color}}>
+      <div className='grid gap-7 max-w-md mx-auto shadow-md rounded-lg px-8 py-10 bg-gray-700 text-orange-500'>
         <h1 className='text-white text-4xl font-bold text-center'>Password Generator</h1>
         <div className='flex shadow rounded-lg overflow-hidden bg-white mb-4'>
           <input 
