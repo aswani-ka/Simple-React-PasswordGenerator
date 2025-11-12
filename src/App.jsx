@@ -26,6 +26,10 @@ function App() {
     setPassword(pass)
   }, [length, numberAllowed, charAllowed]) 
 
+   useEffect(() => {
+    generatePassword()
+  }, [length, numberAllowed, charAllowed])
+  
   return (
     <div className='w-full h-screen flex justify-center items-center'>
       <div className='grid gap-7 max-w-md mx-auto shadow-md rounded-lg px-8 py-10 bg-gray-800 text-orange-500'>
